@@ -20,7 +20,7 @@ class EpisodesBySeason extends React.Component {
             console.log("calling filterBySeason");
             this.setState(oldState => ({
                 titles: this.props.episodes.
-                filter(episode => episode["season"] != season).
+                filter(episode => episode["season"] == season).
                 map(episode => episode["title"])
             }))
         }
@@ -29,12 +29,15 @@ class EpisodesBySeason extends React.Component {
     render() {
         return (
             <div>
+                <div>
+                    <button onClick={this.filterBySeason(1)}>Season 1</button>
+                    <button onClick={this.filterBySeason(2)}>Season 2</button>
+                </div>
                 <ul>
                     {this.state.titles.map(
                         title => <li key={title}>{title}</li>
                     )}
                 </ul>
-                <button onClick={this.filterBySeason(1)}>Show</button>
             </div>
         )
     }
