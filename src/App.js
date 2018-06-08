@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Hello from './Hello';
 import logo from './logo.svg';
 import incredibles2 from './incredibles2.jpg';
 import './App.css';
@@ -15,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+          <Hello name={"Jingjing"}/>
       </div>
     );
   }
