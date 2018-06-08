@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Hello from './Hello';
+import Episode from './Episodes';
 import logo from './logo.svg';
 import incredibles2 from './incredibles2.jpg';
 import './App.css';
+import episodes from './episodes.json';
 
 class App extends Component {
   render() {
@@ -16,7 +18,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-          <Hello name={"Jingjing"}/>
+        <Hello name={"Jingjing"}/>
+        <Episode episodes={episodes}/>
       </div>
     );
   }
