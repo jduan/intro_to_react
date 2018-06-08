@@ -11,14 +11,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    name: PropTypes.Array,
+    name: PropTypes.array,
 };
 
-const ListItems = ({episodes}) => (
-    <ul>
-        {episodes.map(episode => <li>{episode.season}, {episode.title}</li>)}
-    </ul>
-);
+const ListItems = ({episodes}) => {
+    const items = episodes.map(episode =>
+        <li key={episode.title}>{episode.title} - Season {episode.season}</li>
+    );
+    return (
+        <ul>
+            {items}
+        </ul>
+    )
+};
 
 ListItems.propTypes = propTypes;
 export default ListItems;
