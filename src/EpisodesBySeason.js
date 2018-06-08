@@ -18,11 +18,11 @@ class EpisodesBySeason extends React.Component {
     filterBySeason(season) {
         return () => {
             console.log("calling filterBySeason");
-            this.setState(oldState => {
+            this.setState(oldState => ({
                 titles: this.props.episodes.
                 filter(episode => episode["season"] != season).
                 map(episode => episode["title"])
-            })
+            }))
         }
     }
 
