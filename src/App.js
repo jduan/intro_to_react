@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Hello from './Hello';
 import Episode from './Episodes';
+import SlapBet from './SlapBet';
 import logo from './logo.svg';
 import incredibles2 from './incredibles2.jpg';
 import './App.css';
@@ -20,6 +21,7 @@ class App extends Component {
         </p>
         <Hello name={"Jingjing"}/>
         <Episode episodes={episodes}/>
+        <SlapBet/>
       </div>
     );
   }
