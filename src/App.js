@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Hello from './Hello';
 import Episode from './Episodes';
 import SlapBet from './SlapBet';
+import EpisodesBySeason from './EpisodesBySeason';
 import logo from './logo.svg';
 import incredibles2 from './incredibles2.jpg';
 import './App.css';
@@ -20,8 +21,9 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Hello name={"Jingjing"}/>
-        <Episode episodes={episodes}/>
-        <SlapBet/>
+        {/*<Episode episodes={episodes}/>*/}
+        {/*<SlapBet/>*/}
+        <EpisodesBySeason episodes={episodes}/>
       </div>
     );
   }
